@@ -2,10 +2,11 @@ package env_test
 
 import (
 	"fmt"
-	"github.com/stretchr/testify/assert"
 	"os"
 	"runtime"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestEnv(t *testing.T) {
@@ -24,5 +25,5 @@ func TestEnv(t *testing.T) {
 	fmt.Println("runtime.NumCgoCall: ", runtime.NumCgoCall())
 	fmt.Println("runtime.NumGoroutine: ", runtime.NumGoroutine())
 	fmt.Println("runtime.Version: ", runtime.Version())
-	assert.True(true)
+	assert.True(t, true)
 }
