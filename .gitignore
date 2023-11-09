@@ -1,5 +1,10 @@
 *
 !*.*
 !*/
-
+!Makefile
+!Dockerfile
 vendor/
+.terraform/
+*.log
+terraform/rumbleheroes/*.sql
+.terragrunt-cache/

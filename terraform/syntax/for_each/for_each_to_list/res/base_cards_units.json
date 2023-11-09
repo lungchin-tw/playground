@@ -1,0 +1,758 @@
+{
+	"cards": [{
+			"item_id": 1,
+			"active": true,
+			"special": false,
+			"info": {},
+			"name": "Birdie, the Brute",
+			"description": "Professional wrestler who packs a huge punch.  Slow and strong, goes directly for enemy structures.",
+			"type": 1,
+			"arena_number": 3,
+			"attributes": {
+				"SpawnsAnywhere": false,
+				"SpawnsSimetric": false,
+				"SpawnsCentral": false,
+				"SpawnTime": 1,
+				"Cost": 5,
+				"Visual": "Brute"
+			},
+			"meta": {
+				"rarity": 2,
+				"faction": "Glory Seekers",
+				"fuse_level_add": 2,
+				"fuse_multiplier": 0.25,
+				"ai": {
+					"Decision": "brute"
+				}
+			},
+			"units": [
+				2
+			]
+		},
+		{
+			"item_id": 21,
+			"active": true,
+			"special": false,
+			"info": {},
+			"name": "Doc Angel",
+			"description": "Head of the GPO Science Congress. He wields a shield ray of his own invention that makes any unit invulnerable.",
+			"type": 1,
+			"arena_number": 3,
+			"attributes": {
+				"SpawnsAnywhere": false,
+				"SpawnsSimetric": false,
+				"SpawnsCentral": false,
+				"SpawnTime": 1,
+				"Cost": 6,
+				"Visual": "DrSmalls"
+			},
+			"meta": {
+				"rarity": 4,
+				"faction": "Global Peace Org",
+				"fuse_level_add": 8,
+				"fuse_multiplier": 0.25,
+				"ai": {
+					"Decision": "drsmalls"
+				}
+			},
+			"units": [
+				31
+			]
+		},
+		{
+			"item_id": 12,
+			"active": true,
+			"special": false,
+			"info": {},
+			"name": "Drone Hive",
+			"description": "Top-selling item in the Gekko Corp. mail order catalogue during The Kungfunium Conflict 1983-1984.",
+			"type": 1,
+			"arena_number": 2,
+			"attributes": {
+				"SpawnsAnywhere": false,
+				"SpawnsSimetric": false,
+				"SpawnsCentral": false,
+				"SpawnTime": 1,
+				"Cost": 5,
+				"Visual": "DroneTower"
+			},
+			"meta": {
+				"rarity": 3,
+				"faction": "Gekko Corp",
+				"fuse_level_add": 5,
+				"fuse_multiplier": 0.25,
+				"ai": {
+					"Decision": "dronetower"
+				}
+			},
+			"units": [
+				17
+			]
+		},
+		{
+			"item_id": 4,
+			"active": true,
+			"special": false,
+			"info": {},
+			"name": "Hiro, Single Dragon",
+			"description": "This street fighter swiftly attacks with his Kungfunium infused punches.",
+			"type": 1,
+			"arena_number": 3,
+			"attributes": {
+				"SpawnsAnywhere": false,
+				"SpawnsSimetric": false,
+				"SpawnsCentral": false,
+				"SpawnTime": 1,
+				"Cost": 4,
+				"Visual": "Kung-FuDelinquent"
+			},
+			"meta": {
+				"rarity": 2,
+				"faction": "Street Brawlers",
+				"fuse_level_add": 2,
+				"fuse_multiplier": 0.25,
+				"ai": {
+					"Decision": "kung-fudelinquent"
+				}
+			},
+			"units": [
+				5
+			]
+		},
+		{
+			"item_id": 23,
+			"active": true,
+			"special": false,
+			"info": {},
+			"name": "Hornet Drones",
+			"description": "Gekko TX-200 Hornet Drones are light weight home defense units but can be formidable in a swarm.",
+			"type": 1,
+			"arena_number": 1,
+			"attributes": {
+				"SpawnsAnywhere": false,
+				"SpawnsSimetric": false,
+				"SpawnsCentral": false,
+				"SpawnTime": 1,
+				"Cost": 3,
+				"Visual": "Drones"
+			},
+			"meta": {
+				"rarity": 2,
+				"faction": "Gekko Corp",
+				"fuse_level_add": 2,
+				"fuse_multiplier": 0.25,
+				"ai": {
+					"Decision": "drones"
+				}
+			},
+			"units": [
+				15,
+				15,
+				15
+			]
+		},
+		{
+			"item_id": 8,
+			"active": true,
+			"special": true,
+			"info": {},
+			"name": "Ion Cannon",
+			"description": "The Strategic Defense initiative (SDi) sends righteous pain down from space - damaging all enemies in a circular area.",
+			"type": 1,
+			"arena_number": 1,
+			"attributes": {
+				"SpawnsAnywhere": true,
+				"SpawnsSimetric": false,
+				"SpawnsCentral": false,
+				"SpawnTime": 1,
+				"Cost": 4,
+				"Visual": "FireballSpell"
+			},
+			"meta": {
+				"rarity": 2,
+				"faction": "Ex-Military",
+				"fuse_level_add": 2,
+				"fuse_multiplier": 0.25,
+				"ai": {
+					"Decision": "fireballspell"
+				}
+			},
+			"units": [
+				9
+			]
+		},
+		{
+			"item_id": 3,
+			"active": true,
+			"special": true,
+			"info": {},
+			"name": "Jane Bow",
+			"description": "She is a freedom fighter and a real straight shooter with high single-target damage.",
+			"type": 1,
+			"arena_number": 1,
+			"attributes": {
+				"SpawnsAnywhere": false,
+				"SpawnsSimetric": false,
+				"SpawnsCentral": false,
+				"SpawnTime": 1,
+				"Cost": 3,
+				"Visual": "JaneBow"
+			},
+			"meta": {
+				"rarity": 2,
+				"faction": "Ex-Military",
+				"fuse_level_add": 2,
+				"fuse_multiplier": 0.25,
+				"ai": {
+					"Decision": "janebow"
+				}
+			},
+			"units": [
+				4
+			]
+		},
+		{
+			"item_id": 10,
+			"active": true,
+			"special": false,
+			"info": {},
+			"name": "Jetpack James",
+			"description": "An airborne member of the Glory Seekers, he deals incremental damage with his twin flame cannons.",
+			"type": 1,
+			"arena_number": 1,
+			"attributes": {
+				"SpawnsAnywhere": false,
+				"SpawnsSimetric": false,
+				"SpawnsCentral": false,
+				"SpawnTime": 1,
+				"Cost": 5,
+				"Visual": "IncrementalFlying"
+			},
+			"meta": {
+				"rarity": 3,
+				"faction": "Glory Seekers",
+				"fuse_level_add": 5,
+				"fuse_multiplier": 0.25,
+				"ai": {
+					"Decision": "incrementalflying"
+				}
+			},
+			"units": [
+				11
+			]
+		},
+		{
+			"item_id": 26,
+			"active": true,
+			"special": true,
+			"info": {},
+			"name": "Jun Feng",
+			"description": "Shaolin monk who harnesses Kungfunium to unleash a ball of pure metaphysical energy damaging anything in its wake.",
+			"type": 1,
+			"arena_number": 1,
+			"attributes": {
+				"SpawnsAnywhere": false,
+				"SpawnsSimetric": false,
+				"SpawnsCentral": false,
+				"SpawnTime": 1,
+				"Cost": 5,
+				"Visual": "JungFeng"
+			},
+			"meta": {
+				"rarity": 2,
+				"faction": "Global Peace Org",
+				"fuse_level_add": 2,
+				"fuse_multiplier": 0.25,
+				"ai": {
+					"Decision": "jungfeng"
+				}
+			},
+			"units": [
+				34
+			]
+		},
+		{
+			"item_id": 13,
+			"active": true,
+			"special": false,
+			"info": {},
+			"name": "Kondo",
+			"description": "Kungfunium fallout deep in the Congo spawned a new breed of soldier trained to take out enemy structures with extreme prejudice.",
+			"type": 1,
+			"arena_number": 2,
+			"attributes": {
+				"SpawnsAnywhere": false,
+				"SpawnsSimetric": false,
+				"SpawnsCentral": false,
+				"SpawnTime": 1,
+				"Cost": 3,
+				"Visual": "Gorilla"
+			},
+			"meta": {
+				"rarity": 2,
+				"faction": "Ex-Military",
+				"fuse_level_add": 2,
+				"fuse_multiplier": 0.25,
+				"ai": {
+					"Decision": "gorilla"
+				}
+			},
+			"units": [
+				18
+			]
+		},
+		{
+			"item_id": 14,
+			"active": true,
+			"special": true,
+			"info": {},
+			"name": "Kondo Protector",
+			"description": "Kondo Protectors are heavily armored riot control fighters inflicting knockback damage on all enemies in their sights.",
+			"type": 1,
+			"arena_number": 1,
+			"attributes": {
+				"SpawnsAnywhere": false,
+				"SpawnsSimetric": false,
+				"SpawnsCentral": false,
+				"SpawnTime": 1,
+				"Cost": 7,
+				"Visual": "GorillaProtector"
+			},
+			"meta": {
+				"rarity": 4,
+				"faction": "Ex-Military",
+				"fuse_level_add": 8,
+				"fuse_multiplier": 0.25,
+				"ai": {
+					"Decision": "gorillaprotector"
+				}
+			},
+			"units": [
+				19
+			]
+		},
+		{
+			"item_id": 24,
+			"active": true,
+			"special": true,
+			"info": {},
+			"name": "Kyle, Single Dragon",
+			"description": "Kyle grew up on the streets with Hiro, now he frequents the rowdiest road houses and is fond of steel toed boots.",
+			"type": 1,
+			"arena_number": 1,
+			"attributes": {
+				"SpawnsAnywhere": false,
+				"SpawnsSimetric": false,
+				"SpawnsCentral": false,
+				"SpawnTime": 1,
+				"Cost": 4,
+				"Visual": "KyleSingleDragon"
+			},
+			"meta": {
+				"rarity": 1,
+				"faction": "Street Brawlers",
+				"fuse_level_add": 0,
+				"fuse_multiplier": 0.25,
+				"ai": {
+					"Decision": "kylesingledragon"
+				}
+			},
+			"units": [
+				32
+			]
+		},
+		{
+			"item_id": 6,
+			"active": true,
+			"special": false,
+			"info": {},
+			"name": "Marty, Power Fist",
+			"description": "This Glory Seeker's only dream was to hack the world. He engineered a video game haptics glove to do just that.",
+			"type": 1,
+			"arena_number": 2,
+			"attributes": {
+				"SpawnsAnywhere": false,
+				"SpawnsSimetric": false,
+				"SpawnsCentral": false,
+				"SpawnTime": 1,
+				"Cost": 5,
+				"Visual": "MartyStu"
+			},
+			"meta": {
+				"rarity": 4,
+				"faction": "Glory Seekers",
+				"fuse_level_add": 8,
+				"fuse_multiplier": 0.25,
+				"ai": {
+					"Decision": "martystu"
+				}
+			},
+			"units": [
+				7
+			]
+		},
+		{
+			"item_id": 9,
+			"active": true,
+			"special": false,
+			"info": {},
+			"name": "Max Damage",
+			"description": "Enhances all of your fighters inside a circular area anywhere on the Arena.",
+			"type": 1,
+			"arena_number": 2,
+			"attributes": {
+				"SpawnsAnywhere": true,
+				"SpawnsSimetric": false,
+				"SpawnsCentral": false,
+				"SpawnTime": 1,
+				"Cost": 2,
+				"Visual": "DamageBuff"
+			},
+			"meta": {
+				"rarity": 3,
+				"faction": "Ex-Military",
+				"fuse_level_add": 5,
+				"fuse_multiplier": 0.25,
+				"ai": {
+					"Decision": "damagebuff"
+				}
+			},
+			"units": [
+				10
+			]
+		},
+		{
+			"item_id": 7,
+			"active": true,
+			"special": false,
+			"info": {},
+			"name": "Shock Agent",
+			"description": "Gekko Corp. Shock Agent stuns single-target enemies with his standard issue Blazer Tazer.",
+			"type": 1,
+			"arena_number": 2,
+			"attributes": {
+				"SpawnsAnywhere": false,
+				"SpawnsSimetric": false,
+				"SpawnsCentral": false,
+				"SpawnTime": 1,
+				"Cost": 5,
+				"Visual": "GekkoAgent"
+			},
+			"meta": {
+				"rarity": 3,
+				"faction": "Gekko Corp",
+				"fuse_level_add": 5,
+				"fuse_multiplier": 0.25,
+				"ai": {
+					"Decision": "gekkoagent"
+				}
+			},
+			"units": [
+				8
+			]
+		},
+		{
+			"item_id": 20,
+			"active": true,
+			"special": false,
+			"info": {},
+			"name": "Shock Spire",
+			"description": "A high-voltage electrode unleashes white hot fury on any victims unlucky enough to enter its vicinity.",
+			"type": 1,
+			"arena_number": 2,
+			"attributes": {
+				"SpawnsAnywhere": false,
+				"SpawnsSimetric": false,
+				"SpawnsCentral": false,
+				"SpawnTime": 1,
+				"Cost": 4,
+				"Visual": "ShockPylon"
+			},
+			"meta": {
+				"rarity": 2,
+				"faction": "Gekko Corp",
+				"fuse_level_add": 2,
+				"fuse_multiplier": 0.25,
+				"ai": {
+					"Decision": "shockpylon"
+				}
+			},
+			"units": [
+				30
+			]
+		},
+		{
+			"item_id": 27,
+			"active": true,
+			"special": false,
+			"info": {},
+			"name": "Shrink Ray",
+			"description": "Global Peace Organization (GPO) non-lethal response to the SDI Ion Cannon.  Permanently lowers fighters effectiveness in battle. Structures are immune.",
+			"type": 1,
+			"arena_number": 1,
+			"attributes": {
+				"SpawnsAnywhere": true,
+				"SpawnsSimetric": false,
+				"SpawnsCentral": false,
+				"SpawnTime": 1,
+				"Cost": 4,
+				"Visual": "Shrink"
+			},
+			"meta": {
+				"rarity": 3,
+				"faction": "Global Peace Org",
+				"fuse_level_add": 5,
+				"fuse_multiplier": 0.25,
+				"ai": {
+					"Decision": "shrink"
+				}
+			},
+			"units": [
+				35
+			]
+		},
+		{
+			"item_id": 11,
+			"active": true,
+			"special": false,
+			"info": {},
+			"name": "Spider Agent",
+			"description": "Trained in corporate  espionage, Gekko Corp. Spider Agent attacks with hot pink but is pure heavy metal.",
+			"type": 1,
+			"arena_number": 1,
+			"attributes": {
+				"SpawnsAnywhere": false,
+				"SpawnsSimetric": false,
+				"SpawnsCentral": false,
+				"SpawnTime": 1,
+				"Cost": 5,
+				"Visual": "SpiderQueen"
+			},
+			"meta": {
+				"rarity": 3,
+				"faction": "Gekko Corp",
+				"fuse_level_add": 5,
+				"fuse_multiplier": 0.25,
+				"ai": {
+					"Decision": "spiderqueen"
+				}
+			},
+			"units": [
+				16
+			]
+		},
+		{
+			"item_id": 22,
+			"active": true,
+			"special": true,
+			"info": {},
+			"name": "Spider Bots",
+			"description": "if you see a pack of ED-109 Gekko Spider Bots coming at you, there's only one option. Runaway.",
+			"type": 1,
+			"arena_number": 1,
+			"attributes": {
+				"SpawnsAnywhere": false,
+				"SpawnsSimetric": false,
+				"SpawnsCentral": false,
+				"SpawnTime": 1,
+				"Cost": 2,
+				"Visual": "Spiders"
+			},
+			"meta": {
+				"rarity": 1,
+				"faction": "Gekko Corp",
+				"fuse_level_add": 0,
+				"fuse_multiplier": 0.25,
+				"ai": {
+					"Decision": "spiders"
+				}
+			},
+			"units": [
+				14,
+				14,
+				14
+			]
+		},
+		{
+			"item_id": 25,
+			"active": true,
+			"special": false,
+			"info": {},
+			"name": "Spider Nest",
+			"description": "Spawns ED-109 Gekko Spider Bots perfect for strategic defense or inducing heavy metal arachnophobia.",
+			"type": 1,
+			"arena_number": 1,
+			"attributes": {
+				"SpawnsAnywhere": false,
+				"SpawnsSimetric": false,
+				"SpawnsCentral": false,
+				"SpawnTime": 1,
+				"Cost": 4,
+				"Visual": "SpiderNest"
+			},
+			"meta": {
+				"rarity": 2,
+				"faction": "Gekko Corp",
+				"fuse_level_add": 2,
+				"fuse_multiplier": 0.25,
+				"ai": {
+					"Decision": "spidernest"
+				}
+			},
+			"units": [
+				33
+			]
+		},
+		{
+			"item_id": 17,
+			"active": true,
+			"special": false,
+			"info": {},
+			"name": "Stealth",
+			"description": "Kungfunium powered nanobots bend light around all fighters in a circular area rendering them invisible. Stealthed fighters cannot attack.",
+			"type": 1,
+			"arena_number": 3,
+			"attributes": {
+				"SpawnsAnywhere": true,
+				"SpawnsSimetric": false,
+				"SpawnsCentral": false,
+				"SpawnTime": 1,
+				"Cost": 3,
+				"Visual": "Stealth"
+			},
+			"meta": {
+				"rarity": 3,
+				"faction": "Global Peace Org",
+				"fuse_level_add": 5,
+				"fuse_multiplier": 0.25,
+				"ai": {
+					"Decision": "stealth"
+				}
+			},
+			"units": [
+				22
+			]
+		},
+		{
+			"item_id": 2,
+			"active": true,
+			"special": false,
+			"info": {},
+			"name": "The Twins",
+			"description": "Not the sharpest tools in the shed, these fitness freaks attack swiftly with their dumbbells.",
+			"type": 1,
+			"arena_number": 2,
+			"attributes": {
+				"SpawnsAnywhere": false,
+				"SpawnsSimetric": false,
+				"SpawnsCentral": false,
+				"SpawnTime": 1,
+				"Cost": 3,
+				"Visual": "Tweens"
+			},
+			"meta": {
+				"rarity": 1,
+				"faction": "Glory Seekers",
+				"fuse_level_add": 0,
+				"fuse_multiplier": 0.25,
+				"ai": {
+					"Decision": "tweens"
+				}
+			},
+			"units": [
+				3,
+				13
+			]
+		},
+		{
+			"item_id": 19,
+			"active": true,
+			"special": false,
+			"info": {},
+			"name": "Tripwire Mine",
+			"description": "Ex-military antipersonnel claymore mine damages any fighters that cross into its laser trip wire.",
+			"type": 1,
+			"arena_number": 1,
+			"attributes": {
+				"SpawnsAnywhere": false,
+				"SpawnsSimetric": false,
+				"SpawnsCentral": true,
+				"SpawnTime": 1,
+				"Cost": 3,
+				"Visual": "TripWire"
+			},
+			"meta": {
+				"rarity": 1,
+				"faction": "Ex-Military",
+				"fuse_level_add": 0,
+				"fuse_multiplier": 0.25,
+				"ai": {
+					"Decision": "tripwire"
+				}
+			},
+			"units": [
+				24
+			]
+		},
+		{
+			"item_id": 16,
+			"active": true,
+			"special": false,
+			"info": {},
+			"name": "Zip, The Grenadier",
+			"description": "Zip is an ex-military building demolitions expert. He likes long walks on the beach, line dancing and the smell of C4 in the morning.",
+			"type": 1,
+			"arena_number": 3,
+			"attributes": {
+				"SpawnsAnywhere": false,
+				"SpawnsSimetric": false,
+				"SpawnsCentral": false,
+				"SpawnTime": 3,
+				"Cost": 6,
+				"Visual": "ZipLineGrenadier"
+			},
+			"meta": {
+				"rarity": 3,
+				"faction": "Ex-Military",
+				"fuse_level_add": 5,
+				"fuse_multiplier": 0.25,
+				"ai": {
+					"Decision": "ziplinegrenadier"
+				}
+			},
+			"units": [
+				21
+			]
+		},
+		{
+			"item_id": 5,
+			"active": true,
+			"special": false,
+			"info": {},
+			"name": "Zoe, the Whip",
+			"description": "Ex-KGB agent with looks to kill. She whips all ground targets in her vicinity.",
+			"type": 1,
+			"arena_number": 2,
+			"attributes": {
+				"SpawnsAnywhere": false,
+				"SpawnsSimetric": false,
+				"SpawnsCentral": false,
+				"SpawnTime": 1,
+				"Cost": 4,
+				"Visual": "CombatS&M"
+			},
+			"meta": {
+				"rarity": 2,
+				"faction": "Street Brawlers",
+				"fuse_level_add": 2,
+				"fuse_multiplier": 0.25,
+				"ai": {
+					"Decision": "combats&m"
+				}
+			},
+			"units": [
+				6
+			]
+		}
+	]
+}

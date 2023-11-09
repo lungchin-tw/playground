@@ -1,0 +1,6 @@
+{
+  "protoc": {
+    "path": "/home/jacky/.local/bin/protoc",
+    "options": ["--proto_path=proto"]
+  }
+}
