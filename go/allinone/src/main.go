@@ -18,6 +18,8 @@ func main() {
 
 	http.HandleFunc("/health", api.HandleHealth)
 	http.HandleFunc("/add/match", api.AddSinglePersonAndMatch)
+	http.HandleFunc("/remove/user", api.RemoveSinglePerson)
+	http.HandleFunc("/query/user", api.QuerySinglePerson)
 
 	go func() {
 		if err := http.ListenAndServe(":8080", nil); err != nil {
