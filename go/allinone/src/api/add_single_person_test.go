@@ -25,6 +25,7 @@ func (s *APIAddSinglePersonTestSuite) SetupSuite() {
 
 func (s *APIAddSinglePersonTestSuite) SetupTest() {
 	s.T().Log(util.CurFuncDesc())
+	model.EmptyDefaultMatchService()
 }
 
 func (s *APIAddSinglePersonTestSuite) TestAddSinglePerson() {
@@ -45,7 +46,7 @@ func (s *APIAddSinglePersonTestSuite) TestAddSinglePerson() {
 	)
 	s.T().Log("POST", url)
 	res, err := http.Post(url, "text/plain", nil)
-	s.Equal(http.StatusOK, res.StatusCode)
+	s.Equal(http.StatusNotFound, res.StatusCode)
 	if err != nil {
 		s.T().Fatal(err)
 	}

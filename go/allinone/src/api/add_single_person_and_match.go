@@ -43,11 +43,15 @@ func AddSinglePersonAndMatch(w http.ResponseWriter, r *http.Request) {
 
 	fmt.Println("\t Source:", source)
 
-	model.DefaultMatchService().AddUser(source)
-	w.WriteHeader(http.StatusOK)
-	if target := model.DefaultMatchService().RandomMatch(source); target != nil {
+	matchService := model.DefaultMatchService()
+	matchService.AddUser(source)
+	if target := matchService.RandomMatch(source); target != nil {
+		w.WriteHeader(http.StatusOK)
+		matchService.DecreaseNumDatesAndRemove(source.Name())
+		matchService.DecreaseNumDatesAndRemove(target.Name())
 		fmt.Fprintln(w, target)
 	} else {
+		w.WriteHeader(http.StatusNotFound)
 		fmt.Fprintln(w, "Can't find any available person")
 	}
 }

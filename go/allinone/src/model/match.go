@@ -22,6 +22,10 @@ func DefaultMatchService() *Match {
 	return defaultMatchService
 }
 
+func EmptyDefaultMatchService() {
+	defaultMatchService = NewMatch()
+}
+
 func NewMatch() *Match {
 	return &Match{
 		users: make(map[string]*User),
@@ -60,13 +64,13 @@ func (m *Match) RandomMatch(source *User) *User {
 	return m.getUserByName(result[rand.Intn(len(result))]).Clone()
 }
 
-func (m *Match) DecreaseNumDatesAndRemove(u *User) error {
+func (m *Match) DecreaseNumDatesAndRemove(name string) error {
 	m.muRemove.Lock()
 	defer m.muRemove.Unlock()
 
-	if v, ok := m.users[u.name]; ok {
+	if v, ok := m.users[name]; ok {
 		if v.DecreaseNumDates() <= 0 {
-			delete(m.users, u.Name())
+			delete(m.users, name)
 		}
 	}
 
