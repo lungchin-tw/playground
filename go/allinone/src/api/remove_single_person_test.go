@@ -25,33 +25,43 @@ func (s *APIRemoveSinglePersonTestSuite) SetupSuite() {
 func (s *APIRemoveSinglePersonTestSuite) SetupTest() {
 	s.T().Log(util.CurFuncDesc())
 	model.EmptyDefaultMatchService()
+
+	samples := sample.GetSampleMaleUsers()
+	samples = append(samples, sample.GetSampleFemaleUsers()[0])
+	for _, v := range samples {
+		model.DefaultMatchService().AddUser(v)
+		s.T().Logf("Add: %v", v.Name())
+	}
 }
 
-func (s *APIRemoveSinglePersonTestSuite) TestQuery() {
+func (s *APIRemoveSinglePersonTestSuite) TestRemovePerson() {
 	s.T().Log(util.CurFuncDesc())
 
-	server := httptest.NewServer(http.HandlerFunc(QuerySinglePerson))
+	server := httptest.NewServer(http.HandlerFunc(RemoveSinglePerson))
 
-	s.T().Log("Server Started.", server.URL)
+	s.T().Log("Server Started:", server.URL)
 	defer server.Close()
 
-	for _, v := range sample.GetSampleMaleUsers() {
-		url := model.BuildURL_AddSinglePersonAndMatch(
-			server.URL,
-			v.Name(),
-			v.Height(),
-			v.Gender(),
-			v.NumDates(),
-		)
-		s.T().Log("POST", url)
-		res, err := http.Post(url, "text/plain", nil)
-		if err != nil {
-			s.T().Fatal(err)
-		}
+	source := sample.GetSampleFemaleUsers()[0]
+	before := model.DefaultMatchService().FindPossiblePeopleByName(source.Name())
+	s.Greater(len(before), 0)
+	s.T().Log("Before:", before)
 
-		s.T().Logf("Add: %v", v.Name())
-		s.Equal(http.StatusNotFound, res.StatusCode)
+	url := model.BuildURL_RemoveSinglePerson(
+		server.URL,
+		source.Name(),
+	)
+	s.T().Log(http.MethodPost, url)
+	res, err := http.Post(url, "text/plain", nil)
+	if err != nil {
+		s.T().Fatal(err)
 	}
+
+	s.Equal(http.StatusOK, res.StatusCode)
+
+	after := model.DefaultMatchService().FindPossiblePeopleByName(source.Name())
+	s.Equal(0, len(after))
+	s.T().Log("After:", after)
 }
 
 func (s *APIRemoveSinglePersonTestSuite) TearDownTest() {

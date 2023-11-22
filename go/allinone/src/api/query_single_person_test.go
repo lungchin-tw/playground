@@ -1,7 +1,7 @@
 package api
 
 import (
-	"io/ioutil"
+	"io"
 	"math/rand"
 	"net/http"
 	"net/http/httptest"
@@ -27,18 +27,12 @@ func (s *APIQuerySinglePersonTestSuite) SetupTest() {
 	s.T().Log(util.CurFuncDesc())
 	model.EmptyDefaultMatchService()
 
-	server := httptest.NewServer(http.HandlerFunc(AddSinglePersonAndMatch))
-
-	s.T().Log("Server Started.", server.URL)
-	defer server.Close()
-
 	samples := sample.GetSampleMaleUsers()
 	samples = append(samples, sample.GetSampleFemaleUsers()[0])
 	for _, v := range samples {
 		model.DefaultMatchService().AddUser(v)
 		s.T().Logf("Add: %v", v.Name())
 	}
-
 }
 
 func (s *APIQuerySinglePersonTestSuite) TestQuery() {
@@ -52,15 +46,15 @@ func (s *APIQuerySinglePersonTestSuite) TestQuery() {
 		server.URL,
 		source.Name(),
 	)
-	s.T().Log("GET", url)
+
+	s.T().Log(http.MethodGet, url)
 	res, err := http.Get(url)
 	if err != nil {
 		s.T().Fatal(err)
 	}
 
 	s.T().Logf("Response: %v, Error:%v", res, err)
-
-	payload, err := ioutil.ReadAll(res.Body)
+	payload, err := io.ReadAll(res.Body)
 	if err != nil {
 		s.T().Fatal(err)
 	}

@@ -3,6 +3,7 @@ package api
 import (
 	"fmt"
 	"net/http"
+	"playground/allinone/model"
 	"playground/allinone/util"
 )
 
@@ -17,5 +18,13 @@ func RemoveSinglePerson(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	user_name, err := model.GetUserFromURL(r.URL)
+	if err != nil {
+		w.WriteHeader(http.StatusBadRequest)
+		fmt.Fprintln(w, err.Error())
+		return
+	}
+
+	model.DefaultMatchService().DeleteUser(user_name)
 	w.WriteHeader(http.StatusOK)
 }

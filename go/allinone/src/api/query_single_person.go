@@ -33,5 +33,4 @@ func QuerySinglePerson(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusNotFound)
 		fmt.Fprintln(w, "Can't find any available person")
 	}
-
 }

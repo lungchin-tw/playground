@@ -75,16 +75,20 @@ func (m *Match) RandomMatch(source *User) *User {
 }
 
 func (m *Match) DecreaseNumDatesAndRemove(name string) error {
-	m.muRemove.Lock()
-	defer m.muRemove.Unlock()
-
 	if v, ok := m.users[name]; ok {
 		if v.DecreaseNumDates() <= 0 {
-			delete(m.users, name)
+			m.DeleteUser(name)
 		}
 	}
 
 	return nil
+}
+
+func (m *Match) DeleteUser(name string) {
+	m.muRemove.Lock()
+	defer m.muRemove.Unlock()
+
+	delete(m.users, name)
 }
 
 func (m *Match) checkMatchCondition(source, target *User) bool {

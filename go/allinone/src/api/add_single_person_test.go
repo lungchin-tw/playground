@@ -1,7 +1,7 @@
 package api
 
 import (
-	"io/ioutil"
+	"io"
 	"math/rand"
 	"net/http"
 	"net/http/httptest"
@@ -53,7 +53,7 @@ func (s *APIAddSinglePersonTestSuite) TestAddSinglePerson() {
 
 	s.T().Logf("Response: %v, Error:%v", res, err)
 
-	payload, err := ioutil.ReadAll(res.Body)
+	payload, err := io.ReadAll(res.Body)
 	if err != nil {
 		s.T().Fatal(err)
 	}
