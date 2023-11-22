@@ -37,7 +37,7 @@ func (s *APIAddSinglePersonTestSuite) TestAddSinglePerson() {
 	defer server.Close()
 
 	user := sample.GetSampleMaleUsers()[0]
-	url := model.BuildURL(
+	url := model.BuildURL_AddSinglePersonAndMatch(
 		server.URL,
 		user.Name(),
 		user.Height(),

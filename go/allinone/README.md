@@ -109,7 +109,9 @@ classDiagram
     - util: utility functionality, for example: call stack related functions
   - build.sh and run.sh: for building and running the docker image on the local machine
 - TBD Tasks
+  - Use a modern HTTP framework to replace current one
   - Log System
+  - Optimize exception handling
   - Refactoring code: remove duplicate part
   - Tests Automation: 
     - write shell scripts for integration tests

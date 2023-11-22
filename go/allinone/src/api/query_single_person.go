@@ -3,6 +3,7 @@ package api
 import (
 	"fmt"
 	"net/http"
+	"playground/allinone/model"
 	"playground/allinone/util"
 )
 
@@ -17,5 +18,20 @@ func QuerySinglePerson(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	w.WriteHeader(http.StatusOK)
+	user_name, err := model.GetUserFromURL(r.URL)
+	if err != nil {
+		w.WriteHeader(http.StatusBadRequest)
+		fmt.Fprintln(w, err.Error())
+		return
+	}
+
+	result := model.DefaultMatchService().FindPossiblePeopleByName(user_name)
+	if len(result) > 0 {
+		w.WriteHeader(http.StatusOK)
+		fmt.Fprintln(w, result)
+	} else {
+		w.WriteHeader(http.StatusNotFound)
+		fmt.Fprintln(w, "Can't find any available person")
+	}
+
 }

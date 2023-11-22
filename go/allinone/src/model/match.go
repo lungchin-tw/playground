@@ -49,10 +49,20 @@ func (m *Match) FindPossiblePeople(source *User) []string {
 		if m.checkMatchCondition(source, target) == true {
 			result = append(result, target.Name())
 		}
-
 	}
 
 	return result
+}
+
+func (m *Match) FindPossiblePeopleByName(user string) []string {
+	result := []string{}
+
+	source := m.getUserByName(user)
+	if source == nil {
+		return result
+	} else {
+		return m.FindPossiblePeople(source)
+	}
 }
 
 func (m *Match) RandomMatch(source *User) *User {

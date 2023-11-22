@@ -18,7 +18,13 @@ func AddSinglePersonAndMatch(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	user_name := model.GetUserFromURL(r.URL)
+	user_name, err := model.GetUserFromURL(r.URL)
+	if err != nil {
+		w.WriteHeader(http.StatusBadRequest)
+		fmt.Fprintln(w, err.Error())
+		return
+	}
+
 	height, err := model.GetHeightFromURL(r.URL)
 	if err != nil {
 		w.WriteHeader(http.StatusBadRequest)

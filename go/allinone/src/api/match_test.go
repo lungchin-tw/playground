@@ -37,7 +37,7 @@ func (s *APIMatchTestSuite) TestMatchSuccess() {
 	defer server.Close()
 
 	for _, v := range sample.GetSampleMaleUsers() {
-		url := model.BuildURL(
+		url := model.BuildURL_AddSinglePersonAndMatch(
 			server.URL,
 			v.Name(),
 			v.Height(),
@@ -55,7 +55,7 @@ func (s *APIMatchTestSuite) TestMatchSuccess() {
 	}
 
 	source := sample.GetSampleFemaleUsers()[0]
-	url := model.BuildURL(
+	url := model.BuildURL_AddSinglePersonAndMatch(
 		server.URL,
 		source.Name(),
 		source.Height(),
@@ -91,7 +91,7 @@ func (s *APIMatchTestSuite) TestMatchUntilFail() {
 	{
 		male := sample.GetSampleMaleUsers()[0]
 
-		url := model.BuildURL(
+		url := model.BuildURL_AddSinglePersonAndMatch(
 			server.URL,
 			male.Name(),
 			male.Height(),
@@ -111,7 +111,7 @@ func (s *APIMatchTestSuite) TestMatchUntilFail() {
 	counter := 0
 	source := sample.GetSampleFemaleUsers()[0]
 	for {
-		url := model.BuildURL(
+		url := model.BuildURL_AddSinglePersonAndMatch(
 			server.URL,
 			source.Name(),
 			source.Height(),

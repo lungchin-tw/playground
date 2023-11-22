@@ -36,7 +36,7 @@ func (s *APIRemoveSinglePersonTestSuite) TestQuery() {
 	defer server.Close()
 
 	for _, v := range sample.GetSampleMaleUsers() {
-		url := model.BuildURL(
+		url := model.BuildURL_AddSinglePersonAndMatch(
 			server.URL,
 			v.Name(),
 			v.Height(),

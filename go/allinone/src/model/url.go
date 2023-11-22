@@ -7,8 +7,8 @@ import (
 	"strconv"
 )
 
-func BuildURL(
-	host string,
+func BuildURL_AddSinglePersonAndMatch(
+	path string,
 	user string,
 	height int,
 	gender EnumGender,
@@ -16,7 +16,7 @@ func BuildURL(
 ) string {
 	return fmt.Sprintf(
 		"%v?%v=%v&%v=%v&%v=%v&%v=%v",
-		host,
+		path,
 		config.PARAM_USER, user,
 		config.PARAM_HEIGHT, height,
 		config.PARAM_GENDER, gender,
@@ -24,8 +24,35 @@ func BuildURL(
 	)
 }
 
-func GetUserFromURL(url *url.URL) string {
-	return url.Query().Get(config.PARAM_USER)
+func BuildURL_QuerySinglePerson(
+	host string,
+	user string,
+) string {
+	return fmt.Sprintf(
+		"%v?%v=%v",
+		host,
+		config.PARAM_USER, user,
+	)
+}
+
+func BuildURL_RemoveSinglePerson(
+	host string,
+	user string,
+) string {
+	return fmt.Sprintf(
+		"%v?%v=%v",
+		host,
+		config.PARAM_USER, user,
+	)
+}
+
+func GetUserFromURL(url *url.URL) (string, error) {
+	v := url.Query().Get(config.PARAM_USER)
+	if len(v) == 0 {
+		return "", fmt.Errorf("User Not Found in Query")
+	}
+
+	return v, nil
 }
 
 func GetHeightFromURL(url *url.URL) (int, error) {
