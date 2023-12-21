@@ -1,4 +1,4 @@
-package env_test
+package main
 
 import (
 	"fmt"
